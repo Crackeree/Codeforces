@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    map<string,pair<int,string> >mp;
+    mp["purple"]=make_pair(0,"Power");
+    mp["green"]=make_pair(0,"Time");
+    mp["blue"]=make_pair(0,"Space");
+    mp["orange"]=make_pair(0,"Soul");
+    mp["red"]=make_pair(0,"Reality");
+    mp["yellow"]=make_pair(0,"Mind");
+    int n;
+    cin>>n;
+    cout<<6-n<<endl;
+    while(n--)
+    {
+        string temp;
+        cin>>temp;
+        ++mp[temp].first;
+
+    }
+    map<string,pair<int,string> >:: iterator it;
+    for(it=mp.begin();it!=mp.end();it++)
+    {
+        if(it->second.first==0)cout<<it->second.second<<endl;
+    }
+
+}
